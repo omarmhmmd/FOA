@@ -1,0 +1,32 @@
+.container {
+  background-color: white;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
+  font-size: 12px;
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.container:nth-child(2) {
+  margin-left: 24px;
+}
+
+.year {
+  font-weight: bold;
+}
+
+.drag {
+	height: 16px;
+	width: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #B0B0B0;
+	cursor: grab;
+
+
+  &:active {
+    cursor: grabbing;
+  }
+}
