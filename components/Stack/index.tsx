@@ -7,23 +7,12 @@ interface Props {}
 const Stack: NextPage<Props> = () => {
   return (
     <>
-			<FlagFragment
-				image={`/images/2.png`}
-				year="1901-19"
-				era="Emirate of Afghanistan"
-			/>
-			<FlagFragment
-				image={`/images/2.png`}
-				year="1901-19"
-				era="Emirate of Afghanistan"
-			/>
-			<FlagFragment
-				image={`/images/2.png`}
-				year="1901-19"
-				era="Emirate of Afghanistan"
-			/>
-		</>
-		
+      <FlagFragment
+        image={`/images/0.png`}
+        year="1901-19"
+        era="Emirate of Afghanistan"
+      />
+    </>
   );
 };
 
