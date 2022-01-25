@@ -1,7 +1,40 @@
+$dropShadow: drop-shadow(0px 2.5px 2.5px rgba(0, 0, 0, 0.25));
+
 .container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+	margin-top: 25px;
+
+  .clickContainer {
+		position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95vw;
+		top: 25px;
+
+    h3 {
+      font-weight: 400;
+      font-size: 22px;
+      text-align: center;
+      font-family: "Zeyn";
+    }
+    .click {
+      background-color: white;
+      filter: $dropShadow;
+      display: flex;
+      padding: 8px;
+      margin-left: 8px;
+			cursor: pointer;
+    }
+  }
+
+  .helvetica {
+    font-size: 24px;
+    font-weight: 100;
+  }
 }

@@ -2,8 +2,6 @@ html,
 body, p, h1, h2, h3 {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,4 +11,19 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Zeyn";
+  src: url("/fonts/29LTZeyn-Light.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Zeyn";
+  src: url("/fonts/29LTZeyn-Regular.otf");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
 }

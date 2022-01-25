@@ -1,24 +1,26 @@
 import styles from "./smallTextBox.module.scss";
 import { NextPage } from "next";
-import Button from "@mui/material/Button";
-import DragIndicatorSharpIcon from "@mui/icons-material/DragIndicatorSharp";
+import NorthEastIcon from "@mui/icons-material/NorthEast";
+
 
 interface Props {
-  year?: string;
-  era?: string;
+  duration?: string;
+  kingdom?: string;
   type?: string;
 }
 
 const SmallTextBox: NextPage<Props> = (props) => {
   return (
     <div className={styles.container}>
-      {props.year && <p className={styles.year}>{props.year}</p>}
+			<div className={styles.text}>
+				<p>{props.duration}</p>
+				<p>{props.kingdom}</p>
+			</div>
       {props.type && (
-        <div className={styles.drag}>
-          <DragIndicatorSharpIcon color="inherit" />
+        <div className={styles.click}>
+          <NorthEastIcon fontSize="small" htmlColor="black" />
         </div>
       )}
-      <p>{props.era}</p>
     </div>
   );
 };
