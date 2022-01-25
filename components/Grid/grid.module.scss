@@ -1,0 +1,15 @@
+.container {
+	display: flex;
+	width: 90vw;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(6, auto);
+		@media (orientation: portrait) {
+			grid-template-columns: repeat(3, auto);
+		}
+	}
+}
