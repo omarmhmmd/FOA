@@ -17,6 +17,11 @@ $dropShadow: drop-shadow(0px 2.5px 2.5px rgba(0, 0, 0, 0.25));
     width: 95vw;
 		top: 25px;
 
+		.title {
+			margin-left: -1px;
+			margin-bottom: 1px;
+		}
+
     h3 {
       font-weight: 400;
       font-size: 22px;

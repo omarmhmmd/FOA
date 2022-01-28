@@ -4,9 +4,10 @@ import styles from "./home.module.scss";
 import Stack from "../components/Stack";
 import TableRowsIcon from "@mui/icons-material/TableRows";
 import Grid from "../components/Grid";
+import MUIGrud from "@mui/material/Grid";
 import ViewComfyIcon from "@mui/icons-material/ViewComfy";
-
 import Fade from "@mui/material/Fade";
+import Title from "../components/Title";
 
 const Index: NextPage = () => {
   const [toggle, setToggle] = useState(false);
@@ -14,11 +15,9 @@ const Index: NextPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.clickContainer}>
-        <h3>
-          بيرق هاى افغانستان
-          <br />
-          <span className={styles.helvetica}>Flags Of Afghanistan</span>
-        </h3>
+        <div className={styles.title}>
+          <Title />
+        </div>
         {toggle && (
           <div className={styles.click} onClick={() => setToggle(false)}>
             <TableRowsIcon fontSize="small" htmlColor="black" />
