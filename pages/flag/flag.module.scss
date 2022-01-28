@@ -1,0 +1,35 @@
+.container {
+  .listContainer {
+    max-height: 100vh;
+    overflow: auto;
+    @media (orientation: portrait) {
+      display: none;
+    }
+
+    .title {
+      border: 1px solid black;
+      border-top: none;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      background-color: white;
+      z-index: 1;
+      padding: 24px;
+    }
+
+    .list {
+      border: 1px solid black;
+      border-top: none;
+      padding-top: 24px;
+      overflow-y: scroll;
+      z-index: 0;
+    }
+
+    .listItem {
+      padding-bottom: 24px;
+      img {
+        width: 82.5%;
+      }
+    }
+  }
+}
