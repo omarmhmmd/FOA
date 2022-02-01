@@ -3,20 +3,22 @@ import Link from "next/link";
 import React, { useState } from "react";
 import styles from "./title.module.scss";
 
+interface Props {
+  farsi: string;
+  english: string;
+}
 
-const Title: NextPage = () => {
-
+const Title: NextPage<Props> = (props) => {
   return (
-		<Link href="/">
+    <Link href="/">
       <div className={styles.container}>
         <h3>
-          بيرق هاى افغانستان
+          {props.farsi}
           <br />
-          <span className={styles.helvetica}>Flags Of Afghanistan</span>
+          <span className={styles.helvetica}> {props.english}</span>
         </h3>
-			</div>
-		</Link>	
-
+      </div>
+    </Link>
   );
 };
 
