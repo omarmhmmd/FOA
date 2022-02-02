@@ -16,7 +16,7 @@ const Index: NextPage = () => {
     <div className={styles.container}>
       <div className={styles.clickContainer}>
         <div className={styles.title}>
-          <Title />
+          <Title farsi="بيرق هاى افغانستان" english="Flags Of Afghanistan" />
         </div>
         {toggle && (
           <div className={styles.click} onClick={() => setToggle(false)}>
