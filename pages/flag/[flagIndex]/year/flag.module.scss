@@ -1,3 +1,5 @@
+$dropShadow: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25));
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -15,6 +17,7 @@
   }
 
   .listContainer {
+		background-color: white;
     max-height: 100vh;
     overflow: auto;
     @media (orientation: portrait) {
@@ -33,13 +36,22 @@
       padding-bottom: 24px;
       img {
         width: 82.5%;
+				filter: $dropShadow;
       }
     }
   }
 
+	.threeJSContainer {
+		height: 100vh;
+		width:100vw;
+		z-index: -1;
+		position: absolute;
+	}
+
   .infoContainer {
     max-height: 100vh;
     overflow: auto;
+		background-color: white;
 
     .infoList {
       border: 1px solid black;
@@ -55,6 +67,7 @@
         justify-content: center;
         img {
           width: 75%;
+					filter: $dropShadow;
         }
       }
 

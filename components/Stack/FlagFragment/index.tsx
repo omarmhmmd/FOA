@@ -9,12 +9,14 @@ interface Props {
   image: string;
   duration: string;
   kingdom: string;
+	year: number;
+	flagIndex: number;
 }
 
 const FlagFragment: NextPage<Props> = (props) => {
   return (
     <>
-      <Link href="/flag/year">
+      <Link href={`/flag/${props.flagIndex+1}/year/${props.year}`}>
         <div className={styles.container}>
           <Image
             src={props.image}
@@ -29,7 +31,7 @@ const FlagFragment: NextPage<Props> = (props) => {
               <SmallTextBox kingdom={props.kingdom} />
             </div>
             <div>
-              <Link href="/flag/year">
+              <Link href={`/flag/${props.year}`}>
                 <SmallTextBox type={"drag"} />
               </Link>
             </div>

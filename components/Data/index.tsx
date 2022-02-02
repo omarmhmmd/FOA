@@ -18,7 +18,7 @@ const Data: NextPage<Props> = (props) => {
           <p>{props.year}</p>
         </div>
         <div className={styles.dataContainer}>
-          <h1>Kingdom</h1>
+          <h1>Government</h1>
           <p>{props.kingdom}</p>
         </div>
       </div>

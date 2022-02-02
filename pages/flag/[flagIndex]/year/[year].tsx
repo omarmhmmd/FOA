@@ -1,13 +1,24 @@
 import type { NextPage } from "next";
+import {useRouter} from 'next/router'
 import React, { useState } from "react";
 import styles from "./flag.module.scss";
-import Title from "../../components/Title";
+import Title from "../../../../components/Title";
 import MUIGrid from "@mui/material/Grid";
-import Flag from "../../components/Flag";
-import { flags } from "../../public/flags.js";
-import Data from "../../components/Data";
+import Flag from "../../../../components/Flag";
+import { flags } from "../../../../public/flags.js";
+import Data from "../../../../components/Data";
+import ThreeJS from "../../../../components/ThreeJS";
 
 const Index: NextPage = () => {
+
+	const router = useRouter();
+	const {flagIndex,year} = router.query;
+	
+	const flagIndexNum = parseInt(flagIndex as string, 10)
+	
+	const checkFlag = () => {
+		return flagIndexNum-1
+	}
   return (
     <MUIGrid className={styles.container} container spacing={0}>
       <MUIGrid
@@ -27,36 +38,38 @@ const Index: NextPage = () => {
                 image={`https://raw.githubusercontent.com/omarmhmmd/FOA/9d0d1a7a36a8e0d139dc6cfef2873a0a5b9aa26e/public/images/${index}.png`}
                 duration={flag.duration}
                 kingdom={flag.kingdom}
+								year={flag.year}
+								flagIndex={index}
               />
             </div>
           ))}
         </div>
       </MUIGrid>
-      <MUIGrid item sm={6} display={{ xs: "none", sm: "block" }}>
-        <div>xs=6</div>
+      <MUIGrid className={styles.threeJSContainer}>
+        <ThreeJS meshIndex={checkFlag()} />
       </MUIGrid>
       <MUIGrid item xs={12} sm={3} className={styles.infoContainer}>
         <div className={styles.title}>
           <Title
             farsi="جمهوری دمکراتی افغانستان"
-            english="Democratic Republic of Afghanistan"
+            english={flags[checkFlag()].kingdom}
           />
         </div>
         <div className={styles.infoList}>
           <div className={styles.infoFlag}>
             <img
               src={
-                "https://raw.githubusercontent.com/omarmhmmd/FOA/9d0d1a7a36a8e0d139dc6cfef2873a0a5b9aa26e/public/images/13.png"
+                `https://raw.githubusercontent.com/omarmhmmd/FOA/9d0d1a7a36a8e0d139dc6cfef2873a0a5b9aa26e/public/images/${checkFlag()}.png`
               }
               alt="Flag"
             />
           </div>
           <div className={styles.infoData}>
             <Data
-              duration={flags[6].duration}
-              kingdom={"Emirate of Afghanistan"}
-              ruler={flags[6].ruler}
-              year={flags[6].year}
+              duration={flags[checkFlag()].duration}
+              kingdom={flags[checkFlag()].kingdom}
+              ruler={flags[checkFlag()].ruler}
+              year={flags[checkFlag()].year}
             />
           </div>
           <div className={styles.infoEssay}>
