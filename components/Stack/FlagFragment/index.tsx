@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SmallTextBox from "../../SmallTextBox";
 import { NextPage } from "next";
-import React, { useState } from "react";
+import React from "react";
 
 interface Props {
   image: string;
@@ -24,6 +24,8 @@ const FlagFragment: NextPage<Props> = (props) => {
             layout="fill"
             objectFit="cover"
             alt="Fragment of a flag in a list of other fragments"
+						// placeholder="blur"
+						// blurDataURL={`/images/blur/${props.flagIndex}.jpg`}
           />
           <div className={styles.infoContainer}>
             <div>
