@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import {useRouter} from 'next/router'
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import React from "react";
 import styles from "./flag.module.scss";
 import Title from "../../../../components/Title";
 import MUIGrid from "@mui/material/Grid";
@@ -9,16 +9,23 @@ import { flags } from "../../../../public/flags.js";
 import Data from "../../../../components/Data";
 import ThreeJS from "../../../../components/ThreeJS";
 
-const Index: NextPage = () => {
+interface Props {}
 
-	const router = useRouter();
-	const {flagIndex,year} = router.query;
-	
-	const flagIndexNum = parseInt(flagIndex as string, 10)
-	
-	const checkFlag = () => {
-		return flagIndexNum-1
-	}
+export async function getServerSideProps() {
+  return {
+    props: {},
+  };
+}
+
+const Index: NextPage<Props> = () => {
+  const router = useRouter();
+  const { flagIndex, year } = router.query;
+
+  const flagIndexNum = parseInt(flagIndex as string, 10);
+
+  const checkFlag = () => {
+    return flagIndexNum - 1;
+  };
   return (
     <MUIGrid className={styles.container} container spacing={0}>
       <MUIGrid
@@ -27,19 +34,19 @@ const Index: NextPage = () => {
         sm={1.5}
         display={{ xs: "none", sm: "block" }}
       >
-        <div className={styles.title}>
+        <div className={styles.title} style={{ backgroundColor: "white" }}>
           <Title farsi="بيرق هاى افغانستان" english="Flags Of Afghanistan" />
         </div>
         <div className={styles.list}>
           {flags.map((flag, index) => (
-            <div className={styles.listItem}>
+            <div key={index} className={styles.listItem}>
               <Flag
                 key={index}
-                image={`https://raw.githubusercontent.com/omarmhmmd/FOA/9d0d1a7a36a8e0d139dc6cfef2873a0a5b9aa26e/public/images/${index}.png`}
+                image={`/images/flags-sml/${index}.jpg`}
                 duration={flag.duration}
                 kingdom={flag.kingdom}
-								year={flag.year}
-								flagIndex={index}
+                year={flag.year}
+                flagIndex={index}
               />
             </div>
           ))}
@@ -57,12 +64,7 @@ const Index: NextPage = () => {
         </div>
         <div className={styles.infoList}>
           <div className={styles.infoFlag}>
-            <img
-              src={
-                `https://raw.githubusercontent.com/omarmhmmd/FOA/9d0d1a7a36a8e0d139dc6cfef2873a0a5b9aa26e/public/images/${checkFlag()}.png`
-              }
-              alt="Flag"
-            />
+            <img src={`/images/flags-sml/${checkFlag()}.jpg`} alt="Flag" />
           </div>
           <div className={styles.infoData}>
             <Data

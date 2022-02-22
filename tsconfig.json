@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "public/flags.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "public/flags.js", "components/ThreeJS/index.jsx"],
   "exclude": ["node_modules"]
 }

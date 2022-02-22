@@ -16,7 +16,12 @@ interface Props {
 const FlagFragment: NextPage<Props> = (props) => {
   return (
     <>
-       <Link href={`/flag/${props.flagIndex+1}/year/${props.year}`}>
+			 <Link
+            href={{
+              pathname: `/flag/[flagIndex]/year/[year]`,
+              query: { flagIndex: props.flagIndex+1, year: props.year  },
+            }}
+          >
         <div className={styles.container}>
           <img
             src={props.image}
