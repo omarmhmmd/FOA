@@ -10,6 +10,12 @@ import ThreeJS from "../../../../components/ThreeJS";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
+export async function getServerSideProps() {
+  return {
+    props: {},
+  };
+}
+
 const Index = () => {
   const router = useRouter();
   const { flagIndex, year } = router.query;
@@ -480,7 +486,7 @@ const Index = () => {
 
     init();
     go();
-  }, [checkFlag()]);
+  }, []);
   return (
     <MUIGrid className={styles.container} container spacing={0}>
       <MUIGrid
