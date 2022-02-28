@@ -240,12 +240,12 @@ const ThreeJS = (props) => {
         1,
         10000
       );
-			// Change Z based on window width and height -- make it responsive
+      // Change Z based on window width and height -- make it responsive
 
-			/** MOBILE **/
-      camera.position.z = 2000;
-			// camera.position.z = 5000;
-			// camera.position.z = 1000;
+      // /** MOBILE **/
+      // camera.position.z = 2000;
+      // camera.position.z = 5000;
+      camera.position.z = 1000;
       scene.add(camera);
 
       // lights
@@ -272,9 +272,7 @@ const ThreeJS = (props) => {
       // cloth material
       THREE.ImageUtils.crossOrigin = "";
       var clothTexture = THREE.ImageUtils.loadTexture(
-        "https://raw.githubusercontent.com/omarmhmmd/FOA/9d0d1a7a36a8e0d139dc6cfef2873a0a5b9aa26e/public/images/" +
-          props.meshIndex +
-          ".png"
+        "/images/flags-threeJS/" + props.meshIndex + ".jpg"
       );
       clothTexture.wrapS = THREE.RepeatWrapping;
       clothTexture.anisotropy = 16;
@@ -318,12 +316,12 @@ const ThreeJS = (props) => {
 
       // cloth mesh
       object = new THREE.Mesh(clothGeometry, clothMaterial);
-      // object.position.set(-118, 50, 0);
+      object.position.set(-118, 50, 0);
 
-			/**
-			 * Mobile
-			 */
-			object.position.set(0, 200, 0);	
+      /**
+       * Mobile
+       */
+      // object.position.set(0, 200, 0);
       object.castShadow = true;
       object.receiveShadow = true;
       object.rotation.z = Math.PI / 2;
@@ -359,18 +357,19 @@ const ThreeJS = (props) => {
       mesh.position.x = -250;
       mesh.position.y = -500;
 
-			// Mobile don't render
+      // Mobile don't render
       mesh.receiveShadow = true;
       mesh.castShadow = true;
       scene.add(mesh);
 
       //
-      renderer = new THREE.WebGLRenderer();
+      renderer = new THREE.WebGLRenderer({ antialias: false });
       renderer.setSize(
         flagRef.current.clientWidth,
         flagRef.current.clientHeight
       );
       renderer.setClearColor(scene.fog.color);
+			// renderer.setPixelRatio(0.2 );
 
       flagRef.current.appendChild(renderer.domElement);
 
@@ -380,7 +379,6 @@ const ThreeJS = (props) => {
 
       window.addEventListener("resize", onWindowResize, false);
     };
-
 
     function onWindowResize() {
       camera.aspect = window.innerWidth / window.innerHeight;
