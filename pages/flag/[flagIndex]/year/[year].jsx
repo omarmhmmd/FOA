@@ -19,7 +19,7 @@ const Index = () => {
   const checkFlag = () => {
     return flagIndexNum - 1;
   };
-	console.log(checkFlag())
+
   const flagRef = useRef(null);
   const controls = useRef(null);
 
