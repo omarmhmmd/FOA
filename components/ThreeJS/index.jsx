@@ -6,6 +6,7 @@ import styles from "./threeJS.module.scss";
 
 const ThreeJS = (props) => {
   const flagRef = useRef(null);
+	const controls = useRef(null);
 
   useEffect(() => {
     var DAMPING = 0.03;
@@ -277,7 +278,6 @@ const ThreeJS = (props) => {
       clothTexture.wrapS = THREE.RepeatWrapping;
       clothTexture.anisotropy = 16;
       clothTexture.rotation = Math.PI / 4;
-      clothTexture.needsUpdate = true;
 
       var clothMaterial = new THREE.MeshPhongMaterial({
         alphaTest: 0.1,
@@ -291,6 +291,7 @@ const ThreeJS = (props) => {
         side: THREE.DoubleSide,
         needsUpdate: true,
       });
+			clothTexture.needsUpdate=true
 
       // cloth geometry
       clothGeometry = new THREE.ParametricGeometry(
@@ -316,7 +317,18 @@ const ThreeJS = (props) => {
 
       // cloth mesh
       object = new THREE.Mesh(clothGeometry, clothMaterial);
+			object.material.map.needsUpdate=true;
       object.position.set(-118, 50, 0);
+
+			object.traverse(function(child) {
+				if(child instanceof THREE.Mesh){
+						// alert("works");
+						child.material.map = clothTexture;
+						child.material.needsUpdate = true;
+						child.geometry.buffersNeedUpdate = true;
+						child.geometry.uvsNeedUpdate = true;
+				}
+		});
 
       /**
        * Mobile
@@ -443,12 +455,27 @@ const ThreeJS = (props) => {
       oneStep(time);
     }
 
+		var changeFlag = (flagNum) => {
+			object.material.map=THREE.ImageUtils.loadTexture(
+        "/images/flags-threeJS/" + flagNum + ".jpg"
+      );
+    };
+
+    controls.current = { changeFlag };
+
     init();
     go();
   }, [props.meshIndex]);
   return (
     <>
       <div ref={flagRef} className={styles.container}>
+			<button
+        onClick={() => {
+          controls.current.changeFlag(4);
+        }}
+      >
+        changeFlag
+      </button>
         {props.meshIndex}
       </div>
       ;
