@@ -4,6 +4,10 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	@media (orientation: portrait) {
+		padding-top: 75px;
+		
+  }
 
 	.grid {
 		display: grid;

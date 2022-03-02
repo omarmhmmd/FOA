@@ -12,15 +12,15 @@ $dropShadow: drop-shadow(0px 2.5px 2.5px rgba(0, 0, 0, 0.25));
 
   img {
     width: 15.75vw;
-		@media (orientation: portrait) {
-			width: 15vh;
-		}
+    @media (orientation: portrait) {
+      width: 15vh;
+    }
 
-		&:active {
-			position: relative;
-			width: 14.5vw !important;
-			transition: width 0.25s ease;
-		}	
+    &:active {
+      position: relative;
+      width: 14.5vw !important;
+      transition: width 0.25s ease;
+    }
   }
 
   &:hover {
@@ -35,13 +35,13 @@ $dropShadow: drop-shadow(0px 2.5px 2.5px rgba(0, 0, 0, 0.25));
 }
 
 .infoContainer {
-	position: absolute;
+  position: absolute;
   opacity: 0;
   transition: opacity 0.5s ease;
-	width: 75%;
+  width: 75%;
   display: flex;
   justify-content: space-between;
-	// flex-direction: column;
+  // flex-direction: column;
   align-items: center;
   align-content: center;
 }

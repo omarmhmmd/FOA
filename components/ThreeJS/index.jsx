@@ -6,7 +6,7 @@ import styles from "./threeJS.module.scss";
 
 const ThreeJS = (props) => {
   const flagRef = useRef(null);
-	const controls = useRef(null);
+  const controls = useRef(null);
 
   useEffect(() => {
     var DAMPING = 0.03;
@@ -246,7 +246,8 @@ const ThreeJS = (props) => {
       // /** MOBILE **/
       // camera.position.z = 2000;
       // camera.position.z = 5000;
-      camera.position.z = 1000;
+      camera.position.z = 2000;
+      // camera.position.y = 100;
       scene.add(camera);
 
       // lights
@@ -291,7 +292,7 @@ const ThreeJS = (props) => {
         side: THREE.DoubleSide,
         needsUpdate: true,
       });
-			clothTexture.needsUpdate=true
+      clothTexture.needsUpdate = true;
 
       // cloth geometry
       clothGeometry = new THREE.ParametricGeometry(
@@ -317,18 +318,18 @@ const ThreeJS = (props) => {
 
       // cloth mesh
       object = new THREE.Mesh(clothGeometry, clothMaterial);
-			object.material.map.needsUpdate=true;
-      object.position.set(-118, 50, 0);
+      object.material.map.needsUpdate = true;
+      object.position.set(-62.5,175, 0);
 
-			object.traverse(function(child) {
-				if(child instanceof THREE.Mesh){
-						// alert("works");
-						child.material.map = clothTexture;
-						child.material.needsUpdate = true;
-						child.geometry.buffersNeedUpdate = true;
-						child.geometry.uvsNeedUpdate = true;
-				}
-		});
+      object.traverse(function (child) {
+        if (child instanceof THREE.Mesh) {
+          // alert("works");
+          child.material.map = clothTexture;
+          child.material.needsUpdate = true;
+          child.geometry.buffersNeedUpdate = true;
+          child.geometry.uvsNeedUpdate = true;
+        }
+      });
 
       /**
        * Mobile
@@ -353,21 +354,21 @@ const ThreeJS = (props) => {
         new THREE.PlaneGeometry(20000, 20000),
         groundMaterial
       );
-      mesh.position.y = -400;
+      mesh.position.y = -300;
       mesh.rotation.x = -Math.PI / 2;
       mesh.receiveShadow = true;
       scene.add(mesh);
 
       // poles
-      var poleGeo = new THREE.BoxGeometry(5, 1375, 15);
+      var poleGeo = new THREE.BoxGeometry(5, 2500, 15);
       var poleMat = new THREE.MeshPhongMaterial({
         color: 0x000000,
         specular: 0xffffff,
         shiness: 100,
       });
       var mesh = new THREE.Mesh(poleGeo, poleMat);
-      mesh.position.x = -250;
-      mesh.position.y = -500;
+      mesh.position.x = -195;
+      mesh.position.y = -950;
 
       // Mobile don't render
       mesh.receiveShadow = true;
@@ -381,7 +382,7 @@ const ThreeJS = (props) => {
         flagRef.current.clientHeight
       );
       renderer.setClearColor(scene.fog.color);
-			// renderer.setPixelRatio(0.2 );
+      // renderer.setPixelRatio(0.2 );
 
       flagRef.current.appendChild(renderer.domElement);
 
@@ -455,8 +456,8 @@ const ThreeJS = (props) => {
       oneStep(time);
     }
 
-		var changeFlag = (flagNum) => {
-			object.material.map=THREE.ImageUtils.loadTexture(
+    var changeFlag = (flagNum) => {
+      object.material.map = THREE.ImageUtils.loadTexture(
         "/images/flags-threeJS/" + flagNum + ".jpg"
       );
     };
@@ -466,21 +467,7 @@ const ThreeJS = (props) => {
     init();
     go();
   }, [props.meshIndex]);
-  return (
-    <>
-      <div ref={flagRef} className={styles.container}>
-			<button
-        onClick={() => {
-          controls.current.changeFlag(4);
-        }}
-      >
-        changeFlag
-      </button>
-        {props.meshIndex}
-      </div>
-      ;
-    </>
-  );
+  return <div ref={flagRef} className={styles.container}></div>
 };
 
 export default ThreeJS;

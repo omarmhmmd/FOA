@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import React from "react";
+import Link from "next/link";
 import styles from "./flag.module.scss";
 import Title from "../../../../components/Title";
 import MUIGrid from "@mui/material/Grid";
@@ -7,8 +8,12 @@ import Flag from "../../../../components/Flag";
 import { flags } from "../../../../public/flags.js";
 import Data from "../../../../components/Data";
 import ThreeJS from "../../../../components/ThreeJS";
+import Stack from "../../../../components/Stack";
+import Grid from "../../../../components/Grid";
+
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import SmallTextBox from "../../../../components/SmallTextBox";
 
 export async function getServerSideProps() {
   return {
@@ -253,7 +258,7 @@ const Index = () => {
     const init = () => {
       // scene
       scene = new THREE.Scene();
-      scene.fog = new THREE.Fog(0xcce0ff, 500, 10000);
+      scene.fog = new THREE.Fog(0xcce0ff, 0, 7500);
 
       // camera
       camera = new THREE.PerspectiveCamera(
@@ -362,16 +367,22 @@ const Index = () => {
       object.matrixAutoUpdate = false;
       object.updateMatrix();
 
-      // ground
-      var initColor = new THREE.Color(0x957e5c);
+      const getRandomColor = (max) => {
+        return Math.floor(Math.random() * max);
+      };
+
+      if (getRandomColor(2) == 0) {
+        var initColor = new THREE.Color(0x5c7a2e);
+      } else var initColor = new THREE.Color(0x957e5c);
+
       var initTexture = THREE.ImageUtils.generateDataTexture(1, 1, initColor);
       var groundMaterial = new THREE.MeshPhongMaterial({
         color: 0xffffff,
-        specular: 0x111111,
+        specular: 0x5c7a2e,
         map: initTexture,
       });
       var mesh = new THREE.Mesh(
-        new THREE.PlaneGeometry(20000, 20000),
+        new THREE.PlaneGeometry(10000, 10000),
         groundMaterial
       );
       mesh.position.y = -400;
@@ -411,6 +422,16 @@ const Index = () => {
       renderer.shadowMapEnabled = true;
 
       window.addEventListener("resize", onWindowResize, false);
+
+      /**
+       * ZOOM EVENT HERE
+       * */
+      // window.addEventListener("wheel", function (e) {
+      //   console.log(e.deltaY);
+      //   camera.position.z += e.deltaY * 2.5;
+      //   camera.position.clampScalar(0, 5000);
+      //   console.log(camera.position.z);
+      // });
     };
 
     function onWindowResize() {
@@ -519,10 +540,12 @@ const Index = () => {
           ))}
         </div>
       </MUIGrid>
-      <MUIGrid className={styles.threeJSContainer}>
-        <div ref={flagRef} className={styles.container}></div>;
-        {/* <ThreeJS meshIndex={checkFlag()} /> */}
-      </MUIGrid>
+      <MUIGrid
+        id="flagScroll"
+        ref={flagRef}
+        className={styles.threeJSContainer}
+        display={{ xs: "none", sm: "block" }}
+      ></MUIGrid>
       <MUIGrid item xs={12} sm={3} className={styles.infoContainer}>
         <div className={styles.title}>
           <Title
@@ -532,7 +555,13 @@ const Index = () => {
         </div>
         <div className={styles.infoList}>
           <div className={styles.infoFlag}>
-            <img src={`/images/flags-sml/${checkFlag()}.jpg`} alt="Flag" />
+            <MUIGrid display={{ xs: "block", sm: "none" }}>
+              <ThreeJS className={styles.mobileFlag} meshIndex={checkFlag()} />
+              {/* <img src={`/images/flags-sml/${checkFlag()}.jpg`} alt="Flag" /> */}
+            </MUIGrid>
+            <MUIGrid display={{ xs: "none", sm: "block" }}>
+              <img src={`/images/flags-sml/${checkFlag()}.jpg`} alt="Flag" />
+            </MUIGrid>
           </div>
           <div className={styles.infoData}>
             <Data

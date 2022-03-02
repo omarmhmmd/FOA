@@ -1,15 +1,13 @@
 .container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100vw;
-	height: 100vh;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	position: absolute;
+	// display: block;
 	overflow-y: hidden;
 	overflow-x: hidden;
-	color: white;
-	position: absolute;
 
-	button {
-		position: absolute;
+	@media (orientation: landscape) {
+		display: none;
 	}
 }
