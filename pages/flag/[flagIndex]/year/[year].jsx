@@ -10,6 +10,8 @@ import Data from "../../../../components/Data";
 import ThreeJS from "../../../../components/ThreeJS";
 import Stack from "../../../../components/Stack";
 import Grid from "../../../../components/Grid";
+import ArrowBack from "@mui/icons-material/ArrowBack";
+import ArrowUpward from "@mui/icons-material/ArrowUpward";
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
@@ -554,12 +556,12 @@ const Index = () => {
           />
         </div>
         <div className={styles.infoList}>
-          <div className={styles.infoFlag}>
+          <div id="scrollTo" className={styles.infoFlag}>
             <MUIGrid display={{ xs: "block", sm: "none" }}>
               <ThreeJS className={styles.mobileFlag} meshIndex={checkFlag()} />
               {/* <img src={`/images/flags-sml/${checkFlag()}.jpg`} alt="Flag" /> */}
             </MUIGrid>
-            <MUIGrid display={{ xs: "none", sm: "block" }}>
+            <MUIGrid>
               <img src={`/images/flags-sml/${checkFlag()}.jpg`} alt="Flag" />
             </MUIGrid>
           </div>
@@ -602,6 +604,18 @@ const Index = () => {
               cupidatat non proident, sunt in culpa qui officia deserunt mollit
               anim id est laborum.
             </p>
+          </div>
+          <div className={styles.next}>
+            <Link href={`/`}>
+              <div>
+                <ArrowBack fontSize="medium" htmlColor="black" />
+              </div>
+            </Link>
+            <Link href={`#scrollTo`}>
+              <div>
+                <ArrowUpward fontSize="medium" htmlColor="black" />
+              </div>
+            </Link>
           </div>
         </div>
       </MUIGrid>
