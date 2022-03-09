@@ -260,7 +260,7 @@ const Index = () => {
     const init = () => {
       // scene
       scene = new THREE.Scene();
-      scene.fog = new THREE.Fog(0xcce0ff, 0, 7500);
+      scene.fog = new THREE.Fog(0xcce0ff, 0, 10000);
 
       // camera
       camera = new THREE.PerspectiveCamera(
@@ -274,7 +274,8 @@ const Index = () => {
       // /** MOBILE **/
       // camera.position.z = 2000;
       // camera.position.z = 5000;
-      camera.position.z = 1000;
+      camera.position.z = 1125;
+      // camera.position.z = 2000;
       scene.add(camera);
 
       // lights
@@ -437,6 +438,9 @@ const Index = () => {
     };
 
     function onWindowResize() {
+			if (window.innerWidth < 1000) {
+				camera.position.z = 2000;
+			}
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
@@ -556,7 +560,7 @@ const Index = () => {
           />
         </div>
         <div className={styles.infoList}>
-          <div id="scrollTo" className={styles.infoFlag}>
+          <div id="info" className={styles.infoFlag}>
             <MUIGrid display={{ xs: "block", sm: "none" }}>
               <ThreeJS className={styles.mobileFlag} meshIndex={checkFlag()} />
               {/* <img src={`/images/flags-sml/${checkFlag()}.jpg`} alt="Flag" /> */}
@@ -611,7 +615,7 @@ const Index = () => {
                 <ArrowBack fontSize="medium" htmlColor="black" />
               </div>
             </Link>
-            <Link href={`#scrollTo`}>
+            <Link href={`#info`}>
               <div>
                 <ArrowUpward fontSize="medium" htmlColor="black" />
               </div>
