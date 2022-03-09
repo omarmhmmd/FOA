@@ -26,6 +26,7 @@ export async function getServerSideProps() {
 
 const Index = () => {
   const router = useRouter();
+	console.log(router);
   const { flagIndex, year } = router.query;
 
   const flagIndexNum = parseInt(flagIndex);
@@ -303,7 +304,7 @@ const Index = () => {
       // cloth material
       THREE.ImageUtils.crossOrigin = "";
       var clothTexture = THREE.ImageUtils.loadTexture(
-        "/images/flags-threeJS/" + checkFlag() + ".jpg"
+        "/images/flags-threeJS-sml/" + checkFlag() + ".jpg"
       );
       clothTexture.wrapS = THREE.RepeatWrapping;
       clothTexture.anisotropy = 16;
