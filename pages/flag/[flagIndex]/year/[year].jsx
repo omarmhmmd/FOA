@@ -304,7 +304,7 @@ const Index = () => {
       // cloth material
       THREE.ImageUtils.crossOrigin = "";
       var clothTexture = THREE.ImageUtils.loadTexture(
-        "/images/flags-threeJS-sml/" + checkFlag() + ".jpg"
+        "/images/flags-threeJS/" + checkFlag() + ".jpg"
       );
       clothTexture.wrapS = THREE.RepeatWrapping;
       clothTexture.anisotropy = 16;
