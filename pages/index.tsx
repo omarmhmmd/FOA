@@ -9,6 +9,7 @@ import ViewComfyIcon from "@mui/icons-material/ViewComfy";
 import Fade from "@mui/material/Fade";
 import Title from "../components/Title";
 import { useRouter } from "next/router";
+import Head from 'next/head'
 
 const Index: NextPage = () => {
   const [toggle, setToggle] = useState(false);
@@ -25,6 +26,10 @@ const Index: NextPage = () => {
 
   return (
     <div className={styles.container}>
+			<Head>
+        <title>بيرق هاى افغانستان | Flags Of Afghanistan</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className={styles.clickContainer}>
         <div className={styles.title}>
           <Title farsi="بيرق هاى افغانستان" english="Flags Of Afghanistan" />

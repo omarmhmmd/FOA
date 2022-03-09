@@ -12,6 +12,7 @@ import Stack from "../../../../components/Stack";
 import Grid from "../../../../components/Grid";
 import ArrowBack from "@mui/icons-material/ArrowBack";
 import ArrowUpward from "@mui/icons-material/ArrowUpward";
+import Head from 'next/head'
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
@@ -438,9 +439,9 @@ const Index = () => {
     };
 
     function onWindowResize() {
-			if (window.innerWidth < 1000) {
-				camera.position.z = 2000;
-			}
+      if (window.innerWidth < 1000) {
+        camera.position.z = 2000;
+      }
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
@@ -516,6 +517,10 @@ const Index = () => {
   }, []);
   return (
     <MUIGrid className={styles.container} container spacing={0}>
+      <Head>
+        <title>بيرق هاى افغانستان | Flags Of Afghanistan</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <MUIGrid
         item
         className={styles.listContainer}
