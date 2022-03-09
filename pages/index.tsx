@@ -8,21 +8,20 @@ import MUIGrud from "@mui/material/Grid";
 import ViewComfyIcon from "@mui/icons-material/ViewComfy";
 import Fade from "@mui/material/Fade";
 import Title from "../components/Title";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
 const Index: NextPage = () => {
   const [toggle, setToggle] = useState(false);
-	const router = useRouter()
+  const router = useRouter();
 
-	const push = () => {
-		// switch(toggle) {
-		// 	case toggle:
-		// 		router.push('/table', undefined, { shallow: true })
-		// 	default:
-		// 		router.push('/', undefined, { shallow: true })
-		// }
-	}
-
+  const push = () => {
+    // switch(toggle) {
+    // 	case toggle:
+    // 		router.push('/table', undefined, { shallow: true })
+    // 	default:
+    // 		router.push('/', undefined, { shallow: true })
+    // }
+  };
 
   return (
     <div className={styles.container}>
@@ -31,31 +30,45 @@ const Index: NextPage = () => {
           <Title farsi="بيرق هاى افغانستان" english="Flags Of Afghanistan" />
         </div>
         {toggle && (
-          <div className={styles.click} onClick={() => {setToggle(false); push()}}>
+          <div
+            className={styles.click}
+            onClick={() => {
+              setToggle(false);
+              push();
+            }}
+          >
             <TableRowsIcon fontSize="small" htmlColor="black" />
           </div>
         )}
         {!toggle && (
-          <div className={styles.click} onClick={() => {setToggle(true); push()}}>
+          <div
+            className={styles.click}
+            onClick={() => {
+              setToggle(true);
+              push();
+            }}
+          >
             <ViewComfyIcon fontSize="small" htmlColor="black" />
           </div>
         )}
       </div>
 
-      {!toggle && (
-        <Fade timeout={1500} in={!toggle}>
-          <span>
-            <Stack />
-          </span>
-        </Fade>
-      )}
-      {toggle && (
-        <Fade timeout={1500} in={toggle}>
-          <span>
-            <Grid />
-          </span>
-        </Fade>
-      )}
+      <div>
+        {!toggle && (
+          <Fade timeout={1500} in={!toggle}>
+            <span>
+              <Stack />
+            </span>
+          </Fade>
+        )}
+        {toggle && (
+          <Fade timeout={1500} in={toggle}>
+            <span>
+              <Grid />
+            </span>
+          </Fade>
+        )}
+      </div>
     </div>
   );
 };

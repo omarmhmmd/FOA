@@ -565,7 +565,7 @@ const Index = () => {
               <ThreeJS className={styles.mobileFlag} meshIndex={checkFlag()} />
               {/* <img src={`/images/flags-sml/${checkFlag()}.jpg`} alt="Flag" /> */}
             </MUIGrid>
-            <MUIGrid>
+            <MUIGrid display={{ xs: "none", sm: "block" }}>
               <img src={`/images/flags-sml/${checkFlag()}.jpg`} alt="Flag" />
             </MUIGrid>
           </div>
