@@ -26,6 +26,7 @@ export async function getServerSideProps() {
 
 const Index = () => {
   const router = useRouter();
+	console.log(router);
   const { flagIndex, year } = router.query;
 
   const flagIndexNum = parseInt(flagIndex);

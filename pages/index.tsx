@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./home.module.scss";
 import Stack from "../components/Stack";
 import TableRowsIcon from "@mui/icons-material/TableRows";
@@ -23,6 +23,10 @@ const Index: NextPage = () => {
     // 		router.push('/', undefined, { shallow: true })
     // }
   };
+
+	useEffect(() => {
+    router.prefetch('/flag/[flagIndex]/year/[year]')
+  }, [])
 
   return (
     <div className={styles.container}>
