@@ -15,15 +15,6 @@ const Index: NextPage = () => {
   const [toggle, setToggle] = useState(false);
   const router = useRouter();
 
-  const push = () => {
-    // switch(toggle) {
-    // 	case toggle:
-    // 		router.push('/table', undefined, { shallow: true })
-    // 	default:
-    // 		router.push('/', undefined, { shallow: true })
-    // }
-  };
-
 	useEffect(() => {
     router.prefetch('/flag/[flagIndex]/year/[year]')
   }, [])

@@ -26,7 +26,6 @@ export async function getServerSideProps() {
 
 const Index = () => {
   const router = useRouter();
-	console.log(router);
   const { flagIndex, year } = router.query;
 
   const flagIndexNum = parseInt(flagIndex);
@@ -262,7 +261,7 @@ const Index = () => {
     const init = () => {
       // scene
       scene = new THREE.Scene();
-      scene.fog = new THREE.Fog(0xcce0ff, 0, 10000);
+      scene.fog = new THREE.Fog(0xcce0ff, 0, 7000);
 
       // camera
       camera = new THREE.PerspectiveCamera(
