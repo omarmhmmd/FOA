@@ -34,7 +34,6 @@ const Index: NextPage = () => {
             className={styles.click}
             onClick={() => {
               setToggle(false);
-              push();
             }}
           >
             <TableRowsIcon fontSize="small" htmlColor="black" />
@@ -45,7 +44,6 @@ const Index: NextPage = () => {
             className={styles.click}
             onClick={() => {
               setToggle(true);
-              push();
             }}
           >
             <ViewComfyIcon fontSize="small" htmlColor="black" />
