@@ -519,7 +519,9 @@ const Index = () => {
     <MUIGrid className={styles.container} container spacing={0}>
       <Head>
         <title>بيرق هاى افغانستان | Flags Of Afghanistan</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name='viewport' content="initial-scale=1, viewport-fit=cover"/>
+        <meta name="theme-color" content="#CCE0FF"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="#CCE0FF"/>
       </Head>
       <MUIGrid
         item

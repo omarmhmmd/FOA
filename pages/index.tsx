@@ -23,7 +23,7 @@ const Index: NextPage = () => {
     <div className={styles.container}>
 			<Head>
         <title>بيرق هاى افغانستان | Flags Of Afghanistan</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name='viewport' content="initial-scale=1, viewport-fit=cover"/>
       </Head>
       <div className={styles.clickContainer}>
         <div className={styles.title}>
