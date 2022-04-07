@@ -12,7 +12,9 @@ import Stack from "../../../../components/Stack";
 import Grid from "../../../../components/Grid";
 import ArrowBack from "@mui/icons-material/ArrowBack";
 import ArrowUpward from "@mui/icons-material/ArrowUpward";
-import Head from 'next/head'
+import Head from "next/head";
+import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
+import InnerImageZoom from "react-inner-image-zoom";
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
@@ -348,7 +350,7 @@ const Index = () => {
       // cloth mesh
       object = new THREE.Mesh(clothGeometry, clothMaterial);
       object.material.map.needsUpdate = true;
-      object.position.set(-118, 50, 0);
+      object.position.set(-175, 50, 0);
 
       object.traverse(function (child) {
         if (child instanceof THREE.Mesh) {
@@ -402,7 +404,7 @@ const Index = () => {
         shiness: 100,
       });
       var mesh = new THREE.Mesh(poleGeo, poleMat);
-      mesh.position.x = -250;
+      mesh.position.x = -307.5;
       mesh.position.y = -500;
 
       // Mobile don't render
@@ -519,9 +521,9 @@ const Index = () => {
     <MUIGrid className={styles.container} container spacing={0}>
       <Head>
         <title>بيرق هاى افغانستان | Flags Of Afghanistan</title>
-        <meta name='viewport' content="initial-scale=1, viewport-fit=cover"/>
-        <meta name="theme-color" content="#CCE0FF"/>
-        <meta name="apple-mobile-web-app-status-bar-style" content="#CCE0FF"/>
+        <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-color" content="#CCE0FF" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#CCE0FF" />
       </Head>
       <MUIGrid
         item
@@ -559,7 +561,7 @@ const Index = () => {
         className={styles.threeJSContainer}
         display={{ xs: "none", sm: "block" }}
       ></MUIGrid>
-      <MUIGrid item xs={12} sm={3} className={styles.infoContainer}>
+      <MUIGrid item xs={12} sm={4} className={styles.infoContainer}>
         <div className={styles.title}>
           <Title
             farsi="جمهوری دمکراتی افغانستان"
@@ -573,7 +575,14 @@ const Index = () => {
               {/* <img src={`/images/flags-sml/${checkFlag()}.jpg`} alt="Flag" /> */}
             </MUIGrid>
             <MUIGrid display={{ xs: "none", sm: "block" }}>
-              <img src={`/images/flags-sml/${checkFlag()}.jpg`} alt="Flag" />
+              <div className={styles.zoomImg}>
+                <InnerImageZoom
+                  src={`/images/flags-sml/${checkFlag()}.jpg`}
+                  hasSpacer={true}
+                  hideHint={true}
+                />
+              </div>
+              {/* <img src={`/images/flags-sml/${checkFlag()}.jpg`} alt="Flag" /> */}
             </MUIGrid>
           </div>
           <div className={styles.infoData}>
