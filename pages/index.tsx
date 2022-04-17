@@ -9,21 +9,28 @@ import ViewComfyIcon from "@mui/icons-material/ViewComfy";
 import Fade from "@mui/material/Fade";
 import Title from "../components/Title";
 import { useRouter } from "next/router";
-import Head from 'next/head'
+import Head from "next/head";
+import NextNProgress from "nextjs-progressbar";
 
 const Index: NextPage = () => {
   const [toggle, setToggle] = useState(false);
   const router = useRouter();
 
-	useEffect(() => {
-    router.prefetch('/flag/[flagIndex]/year/[year]')
-  }, [])
+  useEffect(() => {
+    router.prefetch("/flag/[flagIndex]/year/[year]");
+  }, []);
 
   return (
     <div className={styles.container}>
-			<Head>
+      <NextNProgress
+        color="#009900"
+        startPosition={0}
+        stopDelayMs={200}
+        height={10}
+      />
+      <Head>
         <title>بيرق هاى افغانستان | Flags Of Afghanistan</title>
-        <meta name='viewport' content="initial-scale=1, viewport-fit=cover"/>
+        <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
       </Head>
       <div className={styles.clickContainer}>
         <div className={styles.title}>
