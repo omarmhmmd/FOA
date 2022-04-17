@@ -26,7 +26,7 @@ const Index: NextPage = () => {
         color="#009900"
         startPosition={0}
         stopDelayMs={200}
-        height={10}
+        height={7.5}
       />
       <Head>
         <title>بيرق هاى افغانستان | Flags Of Afghanistan</title>
