@@ -6,6 +6,7 @@ import TableRowsIcon from "@mui/icons-material/TableRows";
 import Grid from "../components/Grid";
 import MUIGrud from "@mui/material/Grid";
 import ViewComfyIcon from "@mui/icons-material/ViewComfy";
+import InfoIcon from "@mui/icons-material/Info";
 import Fade from "@mui/material/Fade";
 import Title from "../components/Title";
 import { useRouter } from "next/router";
@@ -36,26 +37,33 @@ const Index: NextPage = () => {
         <div className={styles.title}>
           <Title farsi="بيرق هاى افغانستان" english="Flags Of Afghanistan" />
         </div>
-        {toggle && (
-          <div
-            className={styles.click}
-            onClick={() => {
-              setToggle(false);
-            }}
-          >
-            <TableRowsIcon fontSize="small" htmlColor="black" />
-          </div>
-        )}
-        {!toggle && (
-          <div
-            className={styles.click}
-            onClick={() => {
-              setToggle(true);
-            }}
-          >
-            <ViewComfyIcon fontSize="small" htmlColor="black" />
-          </div>
-        )}
+        <div className={styles.iconsContainer}>
+          {toggle && (
+            <div
+              className={styles.click}
+              onClick={() => {
+                setToggle(false);
+              }}
+            >
+              <TableRowsIcon fontSize="small" htmlColor="black" />
+            </div>
+          )}
+          {!toggle && (
+            <div
+              className={styles.click}
+              onClick={() => {
+                setToggle(true);
+              }}
+            >
+              <ViewComfyIcon fontSize="small" htmlColor="black" />
+            </div>
+          )}
+          <a target="_blank" href="https://omarmhmmd.notion.site/Marcaz-a4a34f5b547e4d3cad1b8b746833d205">
+            <div className={styles.click}>
+              <InfoIcon fontSize="small" htmlColor="black" />
+            </div>
+          </a>
+        </div>
       </div>
 
       <div>

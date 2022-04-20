@@ -564,7 +564,7 @@ const Index = () => {
       <MUIGrid item xs={12} sm={4} className={styles.infoContainer}>
         <div className={styles.title}>
           <Title
-            farsi="جمهوری دمکراتی افغانستان"
+            farsi={flags[checkFlag()].farsi}
             english={flags[checkFlag()].kingdom}
           />
         </div>
