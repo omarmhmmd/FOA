@@ -58,11 +58,11 @@ const Index: NextPage = () => {
               <ViewComfyIcon fontSize="small" htmlColor="black" />
             </div>
           )}
-          <a target="_blank" rel="noopener" href="https://omarmhmmd.notion.site/Flags-Of-Afghanistan-dcfe7bd17ed140bc846557b6856ac9ea">
+          {/* <a target="_blank" rel="noopener" href="https://omarmhmmd.notion.site/Flags-Of-Afghanistan-dcfe7bd17ed140bc846557b6856ac9ea">
             <div className={styles.click}>
               <InfoIcon fontSize="small" htmlColor="black" />
             </div>
-          </a>
+          </a> */}
         </div>
       </div>
 
