@@ -147,7 +147,7 @@ export const flags = [
     duration: "1996",
     year: 1996,
     kingdom: "Islamic Emirate of Afghanistan",
-    farsi: "امارت اسلامي افغانستان",
+    farsi: "امارت اسلامی افغانستان",
 		ruler: "Mohammad Omar",
     description: "The Taliban soon gained enough power and forced Rabanni and his followers in exile, taking over Kabul and Afghanistan as a whole. The Islamic Emirate of Afghanistan raised a temporary white flag as they organized and legitimized their rule over the country, ruled by Mohammad Omar, the Mujahideen fighter that founded and led the Taliban."
   },
@@ -155,7 +155,7 @@ export const flags = [
     duration: "1996-2001",
     year: 1996,
     kingdom: "Islamic Emirate of Afghanistan",
-    farsi: "امارت اسلامي افغانستان",
+    farsi: "امارت اسلامی افغانستان",
 		ruler: "Mohammad Omar",
     description: "Members and factions of the Mujahideen that were in favor of the Rabanni government formed an alliance of northern territories, called the Northern Alliance. This split saw a Pashtun-led organization in the Taliban versus a Tajik-lead alliance in the Northern Alliance. Although the Taliban government was recognized by select countries, the Rabanni led Islamic State was still recognized by a select few, giving them the authority and resources to resist the Taliban.\n\nThe official Taliban flag was now raised, even though the Northern Alliance would not secede and continued to fight with newfound support from the west. The flag donned the Shahada at full width scale. The only other country that enlists the Shahada on their flag is Saudi Arabia, but not at this scale and and the entirety of its flag.\n\nThe Shahada on the Taliban and Saudi flag are both extremely similar; they are written in a classic calligraphic script that can be found in many instances where the Shahada is rendered. A simple google image search of “Shahada” will place it in context.\n\nAs was the case with the transitional flag of Mojaddedi’s rule a couple years before, the script has been modified and vectorized in such a way that it loses most of its fine precise curvature and details. This could have occurred by way of a simple image-to-logo conversion that software like Photoshop and Illustrator are capable of achieving: supply the software with an image, and the components are then vectorized for production purposes. It gets the job done, but at a high cost of detail to the image and output. This can be done if there is a need to scale an image to a bigger size, or to print on a certain material; in this case the assumption was to enlarge the script of the Shahada big enough to place on the new flag."
   },
@@ -187,7 +187,7 @@ export const flags = [
     duration: "2021-",
     year: 2021,
     kingdom: "Islamic Emirate of Afghanistan",
-    farsi: "امارت اسلامي افغانستان",
+    farsi: "امارت اسلامی افغانستان",
 		ruler: "Hibatullah Akhundzada",
     description: "By August 15th, 2021, the Taliban fought their way across Afghanistan to Kabul, and walked right in. Ashraf Ghani escaped the royal palace in a helicopter, and in the blink of an eye, Afghanistan now belonged to the Taliban all over again. Donald Trump’s presidency built a working relationship with the Taliban, recognizing them as a legitimate group, striking deals and agreements without consulting the actual government of Afghanistan. As the Taliban slowly but surely took control of Afghanistan, Joe Biden’s heinous act of withdrawal from Afghanistan did nothing to stop them.\n\nIt is April 04, 2022 at the time of writing this, and the Taliban are in complete control of Afghanistan under the Islamic Emirate. They have treated the tricolor flag as a sign of resistance, and fly the same white Shahada flag from 1996. The only change is that the Arabic script in this flag seems to be rendered correctly this time, the miscalculated vectorization and lack of high quality graphic design being a thing of the past. However, even though their flag has been updated, it is still not certain how successfully the updated version of the Taliban and the Islamic Emirate will govern this new chapter of Afghanistan."
   },
