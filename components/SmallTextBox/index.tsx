@@ -1,6 +1,7 @@
 import styles from "./smallTextBox.module.scss";
 import { NextPage } from "next";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 
 interface Props {

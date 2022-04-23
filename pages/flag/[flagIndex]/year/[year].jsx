@@ -545,6 +545,7 @@ const Index = () => {
             >
               <Flag
                 key={index}
+                currentFlag={checkFlag()}
                 image={`/images/flags-sml/${index}.jpg`}
                 duration={flag.duration}
                 kingdom={flag.kingdom}
