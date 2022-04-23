@@ -1,6 +1,6 @@
 import styles from "./grid.module.scss";
 import { NextPage } from "next";
-import Flag from "../Flag";
+import FlagStack from "../FlagStack";
 import { flags } from "../../public/flags.js";
 
 interface Props {}
@@ -10,7 +10,7 @@ const Stack: NextPage<Props> = () => {
     <div className={styles.container}>
       <div className={styles.grid}>
         {flags.map((flag, index) => (
-          <Flag
+          <FlagStack
             currentFlag={index}
             key={index}
 						image={`/images/flags-sml/${index}.jpg`}
