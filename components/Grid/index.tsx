@@ -11,6 +11,7 @@ const Stack: NextPage<Props> = () => {
       <div className={styles.grid}>
         {flags.map((flag, index) => (
           <Flag
+            currentFlag={index}
             key={index}
 						image={`/images/flags-sml/${index}.jpg`}
 						duration={flag.duration}
