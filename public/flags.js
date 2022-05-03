@@ -99,7 +99,7 @@ export const flags = [
     duration: "1978",
     year: 1978,
     kingdom: "Democratic Republic of Afghanistan",
-    farsi: "جمهوری دمکراتی افغانستان",
+    farsi: "جمهوری دمکراتیك افغانستان",
 		ruler: "Nur Mohammad Taraki",
     description: "The People’s Democratic Party of Afghanistan (PDPA), a socialist political party founded in 1965, was split into two factions: Khalq (the masses) and Parcham (banner). Led by the Khalq faction, the PDPA overthrew Daoud Khan’s regime in 1978. Nur Mohammad Taraki, the leader of the Khalqs, was appointed General Secretary of the Revolutionary Council, or the President/Leader.\n\nThe transitory flag was immediately stripped of its emblem; an emblem that represented one of the last moments of a moderately peaceful Afghanistan. The country was now officially called the Democratic Republic of Afghanistan, and was in the process of building and growing a political relationship with the Soviet Union."
   },
@@ -107,7 +107,7 @@ export const flags = [
     duration: "1978-1979",
     year: 1979,
     kingdom: "Democratic Republic of Afghanistan",
-    farsi: "جمهوری دمکراتی افغانستان",
+    farsi: "جمهوری دمکراتیك افغانستان",
 		ruler: "Nur Mohammad Taraki",
     description: "With ever-growing support from the Soviet Union, Taraki wanted to shift the narrative of Afghanistan to the future socialist state of Afghanistan. In the process of building a partnership with the Soviet Union, Taraki took advantage of visual, cultural, and spectacle moments to enforce this new rule upon the people.\n\nThe flag of this era takes on “Soviet Red and Yellow”, a branded color palette that is used by most pro-communist states, and of course by the Soviet Union. Placed on a plain red background, the Khalq emblem itself takes space as the canton/top-left section. Resembling from afar the hammer and sickle of the Soviet flag, the Khalq emblem contains the wheat wreath seen in past flags, topped with a Soviet-style star, and a banner that reads “Saur Revolution 1358.” Centered in the emblem is Khalq, written in the nastaliq script style. This is the largest typographic moment in Afghan flag history so far; خلق is written in such a way and size that it almost exists as a logo or major graphic element.\n\nThe entire visual relationship that Afghans built with the tricolor black, red, and green over 40 years was eliminated overnight. Red overtook the flags, government buildings, and daily Afghan life. However, after a short period of rule Taraki’s trust and reliance on other government members, Afghan socio-cultural values, and his closest cabinet members began to deteriorate, while his trust and reliance on the Soviet Union, communist ideals, and secular values grew."
   },
@@ -115,7 +115,7 @@ export const flags = [
     duration: "1979-1986",
     year: 1979,
     kingdom: "Democratic Republic of Afghanistan",
-    farsi: "جمهوری دمکراتی افغانستان",
+    farsi: "جمهوری دمکراتیك افغانستان",
 		ruler: "Babrak Kamal",
     description: "Once an extremely close co-conspirator, Hafizullah Amin began to feel a split occurring with Taraki and his leadership. Taraki, a firm believer in the full support of the Soviet Union, felt threatened by Amin’s uprising and Amin’s growing control of the Afghan army. After a failed assassination attempt against Amin, Amin ordered the army to take control of the government and take Taraki as captive, without consulting his Soviet allies. Taraki was then killed.\n\nIn turn, Amin’s relationship with the Soviet Union deteriorated due to his uncalculated actions and wrongful claim of power. It was at this point the Soviet Union felt they had to physically intervene with force, or else all the efforts and work they put into the control of Afghanistan would fall apart or even backfire. The Soviets invaded Afghanistan, killed Hafizullah Amin, and placed the leader of the Parcham faction, Babrak Karmal, in the seat of power.\n\nIn his “inauguration” speech, Karmal made it clear that the evil rule of the Khalqs was over, and a return to a familiar, peaceful Afghanistan would occur. The flag reverted to the traditional Afghan black, red, and green colors. A canton emblem still in place, it exists as a “redesign/mash-up” of many past emblem elements.\n\nA wheat wreath, rising sun, and star are present; however the star is prominent and red. Half of a cog finishes the top, while a book is set in the bottom; the Quran or the communist manifesto? The same combined minbar/mihrab seen in Daoud Khan’s emblem from 1974 is centered in the emblem. With this icon, and all other elements, Karmal and the Parchams present a flag that considers the old Afghanistan: land of the rising sun, agricultural society, and an islamic nation, while also considering the new Afghanistan: Soviet influence, communism, and industry."
   },
@@ -123,7 +123,7 @@ export const flags = [
     duration: "1986-1992",
     year: 1986,
     kingdom: "Democratic Republic of Afghanistan",
-    farsi: "جمهوری دمکراتی افغانستان",
+    farsi: "جمهوری دمکراتیك افغانستان",
 		ruler: "Mohammad Najibullah",
     description: "Although the claims of Karmal were to unite an Afghanistan with principles based on the past and the future, the invasion of Soviet troops and a lack of major support from the Afghan people placed Karmal in a difficult position. Having been placed in power by the Soviet Union, Karmal was seen as the puppet-in-power, his every word and move a work of the Soviet Union.\n\nHowever, as much as they tried, the Soviets could not make Karmal a positive force in their control of Afghanistan. Reviews and ratings by the people on Karmal’s performance and leadership were extremely low. It was at this point multiple resistance forces combined to form the Mujahideen and took arms against the Soviet Occupation. The Soviet Union believed Karmal could not get the job done, and after much persuasion, forced Karmal to resign from power.\n\nAfter Karmal’s fall, the Soviet Union had another puppet in mind, Mohammad Najibullah, the leader of KHAD (Khadamat-e Aetla'at-e Dawlati) Afghanistan’s intelligence agency under Soviet reign. Najibullah’s flag took moderate design changes: most elements were placed in a different fashion: the cog, the minbar/mihrab, and the rising sun. However the star and book were omitted.\n\nSoon the Mujahideen uprising against the Soviet invasion was in full effect, with different regions, religious, and ethnic groups creating their own factions, working together to rid of the communist threat that was the Soviet Union. Although placed in power by the Soviet Union, the withdrawal of Soviet troops after a failed occupation, the eventual dissolution of the Soviet Union in 1991, and the success of the Mujahideen left Najibullah powerless.\n\nThe Mujahideen eventually took over Kabul, and Najibullah was forced to take asylum in the United Nations headquarters until the Taliban took over Kabul in 1996 and killed him."
   },
