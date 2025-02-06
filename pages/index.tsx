@@ -59,7 +59,7 @@ const Index: NextPage = () => {
               <ViewComfyIcon fontSize="small" htmlColor="black" />
             </div>
           )}
-          <Link href="https://omarmhmmd.notion.site/Flags-Of-Afghanistan-dcfe7bd17ed140bc846557b6856ac9ea">
+          <Link href="https://www.omarmhmmd.com/work/foa/">
             <a target="_blank">
               <div className={styles.click}>
                 <InfoIcon fontSize="small" htmlColor="black" />
